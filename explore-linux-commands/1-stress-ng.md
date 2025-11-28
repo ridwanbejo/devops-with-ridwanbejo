@@ -22,39 +22,34 @@ int32longdouble jenkin jmp ln2 longdouble loop matrixprod nsqrt omega parity phi
 pjw prime psi queens rand rand48 rgb sdbm sieve sqrt trig union zeta
 ```
 
-3. run CPU stress test upon 4 cores within 1 minute and show thermal zone temperatures
-```
-stress-ng --cpu 4 --timeout 1m --tz
-```
-
-4. run 2 virtual memory with forked stressors 4 within 1 minute and show metrics
+3. run 2 virtual memory with forked stressors 4 within 1 minute and show metrics
 ```
 stress-ng --vm 2  --fork 4 --timeout 1m --metrics
 ```
 
-5. run 1 hdd with forked stressors 4 within 1 minute and show metrics
+4. run 1 hdd with forked stressors 4 within 1 minute and show metrics
 ```
 stress-ng --hdd 1 --fork 4 --timeout 1m --metrics
 ```
 
-6. run mix of 3 I/O stressors within 1 minute then check disk SMART metadata
+5. run mix of 3 I/O stressors within 1 minute then check disk SMART metadata
 ```
 stress-ng --iomix 3 --smart --timeout 1m
 ```
 
-7. run combination (cpu, memory, disk) of stress-test within 1 minute and show metrics
+6. run combination (cpu, memory, disk) of stress-test within 1 minute and show metrics
 
 ```
-stress-ng --cpu 4 --vm 2 --hdd 1 --fork 4 --timeout 1m --tz --metrics
+stress-ng --cpu 4 --vm 2 --hdd 1 --fork 4 --timeout 1m --metrics
 ```
 
-8. run 4 matrix operations on CPU within 1 minutes
+7. run 4 matrix operations on CPU within 1 minutes
 
 ```
-stress-ng --matrix 2 --timeout 1m --tz --metrics
+stress-ng --matrix 2 --timeout 1m --metrics
 ```
 
-9. run virtual memory stressros within 1 minute then verify it
+8. run virtual memory stressros within 1 minute then verify it
 
 ```
 stress-ng --vm 2 --vm-bytes 2G  --timeout 1m --verify -v
