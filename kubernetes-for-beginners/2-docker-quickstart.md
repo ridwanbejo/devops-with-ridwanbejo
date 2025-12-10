@@ -303,7 +303,7 @@ ridwanbejo/hello-world-go:latest                                                
 command:
 
 ```
-sudo docker push hello-world-go:latest
+sudo docker push ridwanbejo/hello-world-go:latest
 ```
 
 example output:
